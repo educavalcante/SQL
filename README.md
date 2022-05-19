@@ -1,3 +1,3 @@
 # SQL
-guardar alguns comandos do .net 
-queries udv
+queries udv do .net 
+
