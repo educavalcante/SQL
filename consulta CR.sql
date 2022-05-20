@@ -14,7 +14,7 @@ where s.ativo <> 'N' and cr.valorpago < cr.valor;
 
 
 ========
- /*vendas lanche */
+ /*vendas lanche natureza 171*/
 select DataEmissao, PagadorLivre, s.nome, Competencia, Valor, ValorPago, cr.CodNatureza, n.DescNatureza
  from ContasReceber cr 
  left join Socios s on s.CodSocio = cr.codsocio
@@ -22,5 +22,7 @@ select DataEmissao, PagadorLivre, s.nome, Competencia, Valor, ValorPago, cr.CodN
  where cr.CodNatureza= 171 AND DataEmissao > '1.1.2022'
  order by cr.CodContasReceber desc
  
- /*natureza 171*/
+ /*dspesas vedna natureza 132*/
 
+select FornecedorLivre, CodNatureza, cast(DataEmissao as Date) , DataPagamento, Valor from ContasPagar
+where cast(DataPagamento as Date) > '2022' and CodNatureza = 132
